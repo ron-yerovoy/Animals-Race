@@ -38,7 +38,8 @@ public abstract class Mobile implements ILocatable {
     @Override
     public boolean setLocation(Point location){
         if (location != null){
-            this.location = new Point((location.Getx()), location.Gety());
+            this.location.Setx(location.Getx());
+            this.location.Sety(location.Gety());
             return true;
         }
         return false;   

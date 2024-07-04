@@ -13,6 +13,9 @@ public class Snake extends TerrestrialAnimals implements IReptile{
         this.length = length;
     }
 
+    public boolean SetSpeed(double speed) {
+        return speedUp((int)speed);
+    }
     public String AnimalSound() {
         return "SSSSSSSSS";
     }
@@ -22,9 +25,8 @@ public class Snake extends TerrestrialAnimals implements IReptile{
         {
             return false;
         }
-        this.speed += (double)speed;/// לבדוק איך לסדר את הthis.speed
+        super.SetSpeed(speed);
         return true;
-        //dsffjdsf
 
     }
 

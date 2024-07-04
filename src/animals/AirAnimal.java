@@ -1,6 +1,5 @@
 package animals;
-
-import mobility.Point;
+import mobility.*;
 
 public abstract class AirAnimal extends Animal{
 
@@ -32,5 +31,5 @@ public abstract class AirAnimal extends Animal{
         return super.equals(airAnimal) && wingspan == airAnimal.wingspan;
     }
 
-    public abstract String AnimalSound();///לבדוק אם השורה הזאת חוקית
+    public abstract String AnimalSound();
 }

@@ -1,5 +1,4 @@
 package animals;
-
 import mobility.Point;
 
 public abstract class WaterAnimal extends Animal{
@@ -15,7 +14,7 @@ public abstract class WaterAnimal extends Animal{
     }
 
     public boolean Dive(double dive) {
-        if (diveDept+dive> MAX_DIVE) //לבדוק מה הכוונה כאן
+        if (diveDept+dive<= MAX_DIVE)
             return false;
         this.diveDept += dive;
         return true;
@@ -39,5 +38,5 @@ public abstract class WaterAnimal extends Animal{
         return super.equals(waterAnimal) && diveDept == waterAnimal.diveDept;
     }
 
-    public abstract String AnimalSound();///לבדוק אם השורה הזאת חוקית
+    public abstract String AnimalSound();
 }

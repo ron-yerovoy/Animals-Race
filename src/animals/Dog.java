@@ -1,5 +1,4 @@
 package animals;
-
 import mobility.*;
 
 public class Dog extends TerrestrialAnimals{

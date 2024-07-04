@@ -1,6 +1,8 @@
 package animals;
 import mobility.*;
+import java.util.ArrayList;
 import Olympics.*;
+
 
 public abstract class Animal extends Mobile {
 
@@ -9,7 +11,7 @@ public abstract class Animal extends Mobile {
     private Gender gender=Gender.Male;
     private double weight=0;
     private double speed=0;
-    private Medal medalArr[];
+    private ArrayList<Medal> medalArr;
     private Point position=new Point();
 
     
@@ -19,11 +21,18 @@ public abstract class Animal extends Mobile {
         this.gender = gender;
         this.weight = weight;
         this.speed = speed;
-        this.medalArr = new Medal[1];
+        this.medalArr = new ArrayList<Medal>();//שינוי לרשימה
     }
 
     public String getName() {
         return name;
+    }
+    protected boolean SetSpeed(double speed){
+        this.speed=speed;
+        return true;
+    }
+    public double GetSpeed(){
+        return speed;
     }
     
     public abstract String AnimalSound();
@@ -51,8 +60,16 @@ public abstract class Animal extends Mobile {
             return false;
         if (!(other instanceof Animal))
             return false;
-        Animal animal = (Animal)other;
-        return super.equals(animal) && name.equals(animal.name) && gender == animal.gender && weight == animal.weight && speed == animal.speed && medalArr==animal.medalArr && position.equals(animal.position);
+        Animal animal = (Animal)other;//שינוי השוואת מערך מדליות
+        if(medalArr.size()!= animal.medalArr.size()){
+            return false;
+        }
+        for(Medal m : medalArr){
+            if(!animal.medalArr.contains(m)){
+                return false;
+            }
+        }
+        return super.equals(animal) && name.equals(animal.name) && gender == animal.gender && weight == animal.weight && speed == animal.speed && position.equals(animal.position);
     }
 
 }

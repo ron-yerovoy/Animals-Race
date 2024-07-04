@@ -1,5 +1,4 @@
 package animals;
-
 import mobility.*;
 
 public abstract class TerrestrialAnimals extends Animal{
@@ -30,6 +29,6 @@ public abstract class TerrestrialAnimals extends Animal{
         return super.equals(terrestrialAnimals) && noLegs == terrestrialAnimals.noLegs;
     }
 
-    public abstract String AnimalSound();///לבדוק אם השורה הזאת חוקית
+    public abstract String AnimalSound();
 
 }
