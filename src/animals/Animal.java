@@ -21,7 +21,7 @@ public abstract class Animal extends Mobile {
         this.gender = gender;
         this.weight = weight;
         this.speed = speed;
-        this.medalArr = new ArrayList<Medal>();//שינוי לרשימה
+        this.medalArr = new ArrayList<Medal>();
     }
 
     public String getName() {
@@ -60,7 +60,7 @@ public abstract class Animal extends Mobile {
             return false;
         if (!(other instanceof Animal))
             return false;
-        Animal animal = (Animal)other;//שינוי השוואת מערך מדליות
+        Animal animal = (Animal)other;
         if(medalArr.size()!= animal.medalArr.size()){
             return false;
         }
