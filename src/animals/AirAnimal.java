@@ -6,10 +6,9 @@ public abstract class AirAnimal extends Animal{
     private double wingspan = 0;
 
 
-    public AirAnimal(Point position,String name,Gender gender,double weight,double speed,double wingspan) {
+    public AirAnimal(Point position,String name,Gender gender,double weight,double wingspan) {
 
-        Point Defultposition = new Point(0,100);
-        super(Defultposition,name, gender, weight, speed);
+        super(position = new Point(0,100),name, gender, weight);
         this.wingspan = wingspan;
 
     }

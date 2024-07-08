@@ -4,11 +4,11 @@ import mobility.*;
 public abstract class TerrestrialAnimals extends Animal{
 
     private int noLegs = 0;
+    
 
 
-    public TerrestrialAnimals(Point position,String name,Gender gender,double weight,double speed,int noLegs) {
-        Point Defultposition = new Point(0,20);
-        super(Defultposition,name, gender, weight, speed);
+    public TerrestrialAnimals(Point position,String name,Gender gender,double weight,int noLegs) {
+        super(position=new Point(0,20),name, gender, weight);
         this.noLegs = noLegs;
     }
 
