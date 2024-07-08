@@ -1,4 +1,10 @@
-
+/**
+ * Works by:
+ * Ron yerovoy 
+ * 205591142
+ * Ilya karazhya
+ * 323221846
+ */
 
 package system;
 import animals.*;
@@ -6,16 +12,20 @@ import mobility.*;
 import Olympics.*;
 
 import java.util.Scanner;
-
+/**
+ * The Sys class represents a system for creating and managing various types of animals.
+*/
 public class Sys {
-
+/**
+     * Main method to execute the animal management system.
+     */
     public static void main(String[] args) {
         System.out.println("Enter num of enimals you want to create: ");
         Scanner sc = new Scanner(System.in);
         int numOfAnimals = sc.nextInt();
-        
-        Animal[] animals = new Animal[numOfAnimals];
 
+//create a array of animals
+        Animal[] animals = new Animal[numOfAnimals];
         for(int i = 0; i < numOfAnimals; i++)
         {
             System.out.println("please enter the kind of the animal that you prefer:\n[1]Air Animal \n[2]Water Animal \n[3]Terrestrial Animal");
@@ -207,6 +217,7 @@ public class Sys {
 
             }
         }
+// Menu loop for interacting with created animals        
         System.out.println("Menu:\n [1] Print the data of all animals\n  [2] Print the all sounds of animals\n [3]Exit");
         int choice = sc.nextInt();
         while (choice<4) {
