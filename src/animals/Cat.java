@@ -4,8 +4,8 @@ import mobility.*;
 public class Cat extends TerrestrialAnimals{ 
     private boolean Castrated = false;
 
-    public Cat(Point position,String name,Gender gender,double weight,double speed,int noLegs,boolean Castrated) {
-        super(position,name,gender,weight,speed,noLegs);
+    public Cat(Point position,String name,Gender gender,double weight,int noLegs,boolean Castrated) {
+        super(position,name,gender,weight,noLegs);
         this.Castrated = Castrated;
     }
 

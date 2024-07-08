@@ -7,21 +7,22 @@ import Olympics.*;
 public abstract class Animal extends Mobile {
 
     private String name="Animal";
-    public static enum Gender {Male, Female,Hermaphrodite};
+    public static enum Gender {Male,Female,Hermaphrodite};
     private Gender gender=Gender.Male;
     private double weight=0;
-    private double speed=0;
+    private double speed;
     private ArrayList<Medal> medalArr;
-    private Point position=new Point();
+    private Point position;
 
     
-    public Animal(Point position,String name,Gender gender,double weight,double speed) {
+    public Animal(Point position,String name,Gender gender,double weight) {
         super(position);
         this.name = name;
         this.gender = gender;
         this.weight = weight;
-        this.speed = speed;
+        this.speed = 0;
         this.medalArr = new ArrayList<Medal>();
+        this.position = super.getLocation();    
     }
 
     public String getName() {
@@ -38,7 +39,7 @@ public abstract class Animal extends Mobile {
     public abstract String AnimalSound();
 
     public void makeSound(){
-        System.out.println("Animal"+this.getName()+"said: "+AnimalSound());
+        System.out.println("Animal "+this.getName()+" said: "+AnimalSound());
 
     }
 

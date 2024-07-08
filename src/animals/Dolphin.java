@@ -6,8 +6,8 @@ public class Dolphin extends WaterAnimal {
     private WaterType waterType=WaterType.Sea;
 
 
-    public Dolphin(Point position, String name, Gender gender, double weight, double speed,double diveDept,WaterType waterType) {
-        super(position, name, gender, weight, speed,diveDept);
+    public Dolphin(Point position, String name, Gender gender, double weight,WaterType waterType) {
+        super(position, name, gender, weight);
         this.waterType = waterType;
     }
 

@@ -3,12 +3,14 @@ import mobility.*;
 
 public class Eagle extends AirAnimal{
     private static final int MAX_ALTITUDE = 1000;
-    private double altitudeOfFlight = 0;
+    private double altitudeOfFlight;
 
-    public Eagle(Point position, String name, Gender gender, double weight, double speed,double wingspan,double altitudeOfFlight) {
-        super(position, name, gender, weight, speed,wingspan);
-        this.altitudeOfFlight = altitudeOfFlight;
+    public Eagle(Point position, String name, Gender gender, double weight,double wingspan) {
+        super(position, name, gender, weight,wingspan);
+        this.altitudeOfFlight = 0;
     }
+
+    //add func that changes altitude of flight
 
     public String AnimalSound(){
         return "Clack-wack-chack";

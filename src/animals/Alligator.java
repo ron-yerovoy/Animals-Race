@@ -6,8 +6,8 @@ public class Alligator extends WaterAnimal implements IReptile{
 
     private String AreaOfLiving=null;
 
-    public Alligator(Point position,String name,Gender gender,double weight,double speed,double diveDept,String AreaOfLiving) {
-        super(position,name,gender,weight,speed,diveDept);
+    public Alligator(Point position,String name,Gender gender,double weight,String AreaOfLiving) {
+        super(position,name,gender,weight);
         this.AreaOfLiving = AreaOfLiving;
   
     }

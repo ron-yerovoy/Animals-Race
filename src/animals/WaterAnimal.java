@@ -4,13 +4,12 @@ import mobility.Point;
 public abstract class WaterAnimal extends Animal{
 
     private static final int MAX_DIVE = -800;
-    private double diveDept = 0;
+    private double diveDept;
 
 
-    public WaterAnimal(Point position,String name,Gender gender,double weight,double speed,double diveDept) {
-        Point Defultposition = new Point(50,0);
-        super(Defultposition,name, gender, weight, speed);
-        this.diveDept = diveDept;
+    public WaterAnimal(Point position,String name,Gender gender,double weight) {
+        super(position = new Point(50,0),name, gender, weight);
+        this.diveDept = 0;
     }
 
     public boolean Dive(double dive) {

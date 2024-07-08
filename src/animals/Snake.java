@@ -7,8 +7,8 @@ public class Snake extends TerrestrialAnimals implements IReptile{
     private double length = 0;
 
 
-    public Snake(Point position,String name,Gender gender,double weight,double speed,int noLegs,Poisonous poisonous,double length) {
-        super(position,name,gender,weight,speed,noLegs);
+    public Snake(Point position,String name,Gender gender,double weight,int noLegs,Poisonous poisonous,double length) {
+        super(position,name,gender,weight,noLegs);
         this.poisonous = poisonous;
         this.length = length;
     }
@@ -28,6 +28,24 @@ public class Snake extends TerrestrialAnimals implements IReptile{
         super.SetSpeed(speed);
         return true;
 
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"Snake{" +
+                "poisonous=" + poisonous +
+                ", length=" + length +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!(super.equals(other)))
+            return false;
+        if (!(other instanceof Snake))
+            return false;
+        Snake snake = (Snake) other;
+        return super.equals(snake) && poisonous == snake.poisonous && length == snake.length;
     }
 
 }

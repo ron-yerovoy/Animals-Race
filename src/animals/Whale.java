@@ -5,8 +5,8 @@ public class Whale extends WaterAnimal {
 
     private String foodType = "food";
 
-    public Whale(Point position, String name, Gender gender, double weight, double speed, double diveDept,String foodType) {
-        super(position, name, gender, weight, speed, diveDept);
+    public Whale(Point position, String name, Gender gender, double weight,String foodType) {
+        super(position, name, gender, weight);
         this.foodType = foodType;
     }
 

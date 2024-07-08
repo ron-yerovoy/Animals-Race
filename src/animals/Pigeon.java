@@ -5,8 +5,8 @@ public class Pigeon extends AirAnimal{
     private String family = null;
 
 
-    public Pigeon(Point position, String name, Gender gender, double weight, double speed,double wingspan,String family) {
-        super(position, name, gender, weight, speed,wingspan);
+    public Pigeon(Point position, String name, Gender gender, double weight,double wingspan,String family) {
+        super(position, name, gender, weight,wingspan);
         this.family = family;
     }
 
