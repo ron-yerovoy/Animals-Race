@@ -8,6 +8,7 @@
 
 package system;
 import animals.*;
+import animals.Snake.LevelOfPois;
 import mobility.*;
 import Olympics.*;
 
@@ -201,10 +202,17 @@ public class Sys {
                             System.out.println("please enter if the snake is poisonous or not:\n[1]yes \n[2]no ");
                             int poisonous = sc.nextInt();
                             poisonous = poisonous-1;
+                            int LevelOfPois;
+                            if (poisonous !=2){
+                                System.out.println("please enter the level of poisonus:\n[1]low \n[2]medium \n[3]high");
+                                LevelOfPois = sc.nextInt();
+                                LevelOfPois = LevelOfPois-1;
+                            }
+                            LevelOfPois = 3;
                             System.out.println("please enter the length of the snake: ");
                             double length = sc.nextDouble();
 
-                            animals[i] = new Snake(position,name,Animal.Gender.values()[gender],weight,legCount,Snake.Poisonous.values()[poisonous],length);
+                            animals[i] = new Snake(position,name,Animal.Gender.values()[gender],weight,legCount,Snake.Poisonous.values()[poisonous],length,Snake.LevelOfPois.values()[LevelOfPois]);
                             break;
                         }
                         default:

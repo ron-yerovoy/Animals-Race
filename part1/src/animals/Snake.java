@@ -15,15 +15,18 @@ import mobility.*;
  */
 public class Snake extends TerrestrialAnimals implements IReptile{
     public static enum Poisonous{yes,no};
+    public static enum LevelOfPois{low,medium,high,none};
+    private LevelOfPois levelOfPois = LevelOfPois.low;
     private Poisonous poisonous = Poisonous.no;
     private double length = 0;
 
 /**
      * Constructs a Snake object with the specified position, name, gender, weight, number of legs, poisonous status, and length.
      */ 
-    public Snake(Point position,String name,Gender gender,double weight,int noLegs,Poisonous poisonous,double length) {
+    public Snake(Point position,String name,Gender gender,double weight,int noLegs,Poisonous poisonous,double length,LevelOfPois levelOfPois) {
         super(position,name,gender,weight,noLegs);
         this.poisonous = poisonous;
+        this.levelOfPois = levelOfPois;
         this.length = length;
     }
 /**
