@@ -8,13 +8,18 @@
 package animals;
 import mobility.*;
 import java.util.ArrayList;
+
+import Graphics.IAnimal;
+import Graphics.IClonable;
+import Graphics.IDrawable;
+import Graphics.IMoveable;
 import Olympics.*;
 
 /**
  * The Animal class represents an animal that can move, has a name, gender, weight, speed,
  * and can hold a list of medals. This is an abstract class that extends the Mobile class.
  */
-public abstract class Animal extends Mobile {
+public abstract class Animal extends Mobile implements IAnimal,IClonable,IMoveable,IDrawable,ILocatable {
 
     private String name="Animal";
     /**
@@ -26,6 +31,55 @@ public abstract class Animal extends Mobile {
     private double speed;
     private ArrayList<Medal> medalArr;
     private Point position;
+
+    private IMoveable imoveable;
+    private IDrawable idrawable;
+    private IClonable iclonable;
+
+    protected Point location;
+
+    private int size; 
+    private int id; 
+    private Location loc; 
+    private Orientation orien; 
+    private int maxEnergy;
+    private int Energy; 
+    private int energyPerMeter; 
+    private CompetitionPanel pan; 
+    private BufferedImage img1, img2, img3, img4;
+
+    public String getAnimaleName(){
+        return this.name;
+    }
+    
+    public int getSpeed(){
+        return (int)this.speed;
+    }
+
+    @Override
+    public boolean move(Point p){
+        
+        
+    }
+
+
+
+
+    public boolean eat(int energy){
+        if(this.Energy + energy <= this.maxEnergy)
+        {
+            this.Energy = this.Energy + energy;
+            return true;
+        }
+        else
+            return false;
+        
+
+
+    }
+
+
+
 
  /**
      * Constructs an Animal with the specified position, name, gender, and weight.
